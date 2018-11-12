@@ -1,5 +1,7 @@
 import CharactersService from "./characters-service.js";
 
+
+
 let _charactersService = new CharactersService()
 function _draw() {
 
@@ -33,6 +35,8 @@ function _drawError(error) {
 export default class CharactersController {
   constructor() {
     console.log('hello from characters controller')
+  }
+  showCharacters() {
     _charactersService.getCharacters(_draw, _drawError)
   }
 
